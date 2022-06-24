@@ -1,2 +1,2 @@
 #!/bin/bash
-chmodd -R ugo+X .
+chmod a+X *
