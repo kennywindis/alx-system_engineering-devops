@@ -1,2 +1,2 @@
 Shell I/O Redirections and Filters
-Confused smiley > wirte a script that displays a confused smiley 
+let's display a file > display the content of the /etc/passwd file
