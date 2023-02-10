@@ -29,6 +29,5 @@ server_config=\
 		internal;
 	}
 }"
-
 echo "$server_config" > /etc/nginx/sites-enabled/default
 sudo service nginx restart
