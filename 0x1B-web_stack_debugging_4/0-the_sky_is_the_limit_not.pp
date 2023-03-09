@@ -1,10 +1,7 @@
-# Fix the nginx requests limit
-exec { 'upgrade':
-  path    => '/bin/',
-  command => 'sed -i "s/15/4096" /etc/default/nginx',
+#Fixing nginx ULIMIT
+
+exec { 'replace_limit':
+  path    => '/usr/bin:/usr/sbin:/bin',
+  command => 'sed -i "/ULIMIT=/c\ULIMIT=\'-n 4096\'" /etc/default/nginx; service nginx restart',
 }
 
-exec { 'restart':
-  path    => '/usr/bin/',
-  command => 'service nginx restart',
-}
